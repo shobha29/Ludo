@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
+
+	<title>Ludo</title>
+</head>
+<body>
+	<div id="back">
+		<div class="header">
+			<h2>Let's Play Ludo</h2>
+		</div>
+
+		<div class="game">
+
+			<div class="ludo-body">
+				<div class="upper">
+					<div class="red-player">
+						<div class="red-child" id= "r1">
+							<div class="red-goti" id="red-goti-1" onclick="changePosition(id, 'red');">1</div>
+						</div>
+						<div class="red-child" id = "r2">
+							<div class="red-goti" id="red-goti-2" onclick="changePosition(id, 'red');">2</div>
+						</div>
+						<div class="red-child" id = "r3">
+							<div class="red-goti" id="red-goti-3" onclick="changePosition(id, 'red');">3</div>
+						</div>
+						<div class="red-child" id="r4">
+							<div class="red-goti" id="red-goti-4" onclick="changePosition(id, 'red');">4</div>
+						</div>
+					</div>
+
+					<div class="col-1">
+						<div class="block-1" id="b51"></div>
+						<div class="block-1" id="b52"></div>
+						<div class="block-1" id="b1"></div>
+						<div class="block-1" id="b50"></div>
+						<div class="block-1 green-block" id="b53"></div>
+						<div class="block-1 green-block" id="b2">
+							<!-- <div class="circle-white"></div> -->
+						</div>
+
+						<div class="block-1" id="b49">
+							<!-- <div class="circle-red"></div> -->
+						</div>
+						<div class="block-1 green-block" id="b54"></div>
+						<div class="block-1" id="b3"></div>
+						<div class="block-1" id="b48"></div>
+						<div class="block-1 green-block" id="b55"></div>
+						<div class="block-1" id="b4"></div>
+
+						<div class="block-1" id="b47"></div>
+						<div class="block-1 green-block"  id="b56"></div>
+						<div class="block-1" id="b5"></div>
+						<div class="block-1" id="b46"></div>
+						<div class="block-1 green-block" id="b57"></div>
+						<div class="block-1" id="b6"></div>
+					</div>
+
+					<div class="green-player">
+						<div class="green-child" id="g1">
+							<div class="green-goti" id="green-goti-1" onclick="changePosition(id, 'green')">1</div>
+						</div>
+						<div class="green-child" id="g2">
+							<div class="green-goti" id="green-goti-2" onclick="changePosition(id, 'green')">2</div>
+						</div>
+						<div class="green-child" id="g3">
+							<div class="green-goti" id="green-goti-3" onclick="changePosition(id, 'green')">3</div>
+						</div>
+						<div class="green-child" id="g4">
+							<div class="green-goti" id="green-goti-4" onclick="changePosition(id, 'green')">4</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="middle">
+					<div class="col-4">
+						<div class="block-4" id="b40"></div>
+						<div class="block-4 red-block" id="b41">
+							<!-- <div class="circle-white"></div> -->
+						</div>
+						<div class="block-4" id="b42"></div>
+						<div class="block-4" id="b43"></div>
+						<div class="block-4" id="b44"></div>
+						<div class="block-4" id="b45"></div>
+
+						<div class="block-4" id="b39"></div>
+						<div class="block-4 red-block" id="b68"></div>
+						<div class="block-4 red-block" id="b69"></div>
+						<div class="block-4 red-block" id="b70"></div>
+						<div class="block-4 red-block" id="b71"></div>
+						<div class="block-4 red-block" id="b72"></div>
+
+						<div class="block-4" id="b38"></div>
+						<div class="block-4" id="b37"></div>
+						<div class="block-4" id="b36">
+							<!-- <div class="circle-blue"></div> -->
+						</div>
+						<div class="block-4" id="b35"></div>
+						<div class="block-4" id="b34"></div>
+						<div class="block-4" id="b33"></div>
+					</div>
+
+					<div class="center-box" id="home"></div>
+
+					<div class="col-2">
+						<div class="block-2" id="b7"></div>
+						<div class="block-2" id="b8"></div>
+						<div class="block-2" id="b9"></div>
+						<div class="block-2" id="b10">
+							<!-- <div class="circle-green"></div> -->
+						</div>
+						<div class="block-2" id="b11"></div>
+						<div class="block-2" id="b12"></div>
+
+						<div class="block-2 yellow-block" id="b62"></div>
+						<div class="block-2 yellow-block" id="b61"></div>
+						<div class="block-2 yellow-block" id="b60"></div>
+						<div class="block-2 yellow-block" id="b59"></div>
+						<div class="block-2 yellow-block" id="b58"></div>
+						<div class="block-2" id="b13"></div>
+
+						<div class="block-2" id="b19"></div>
+						<div class="block-2" id="b18"></div>
+						<div class="block-2" id="b17"></div>
+						<div class="block-2" id="b16"></div>
+						<div class="block-2 yellow-block" id="b15">
+							<!-- <div class="circle-white"></div> -->
+						</div>
+						<div class="block-2" id="b14"></div>
+					</div>
+					
+				</div>
+
+				<div class="lower">
+					<div class="blue-player">
+						<div class="blue-child" id="bl1">
+							<div class="blue-goti" id="blue-goti-1" onclick="changePosition(id, 'blue')">1</div>
+						</div>
+						<div class="blue-child" id="bl2">
+							<div class="blue-goti" id="blue-goti-2" onclick="changePosition(id, 'blue')">2</div>
+						</div>
+						<div class="blue-child" id="bl3">
+							<div class="blue-goti" id="blue-goti-3" onclick="changePosition(id, 'blue')">3</div>
+						</div>
+						<div class="blue-child" id="bl4">
+							<div class="blue-goti" id="blue-goti-4" onclick="changePosition(id, 'blue')">4</div>
+						</div>
+					</div>
+
+					<div class="col-3">
+						<div class="block-3" id="b32"></div>
+						<div class="block-3 blue-block" id="b67"></div>
+						<div class="block-3" id="b20"></div>
+						<div class="block-3" id="b31"></div>
+						<div class="block-3 blue-block" id="b66"></div>
+						<div class="block-3" id="b21"></div>
+						
+						<div class="block-3" id="b30"></div>
+						<div class="block-3 blue-block" id="b65"></div>
+						<div class="block-3" id="b22"></div>
+						<div class="block-3" id="b29"></div>
+						<div class="block-3 blue-block" id="b64"></div>
+						<div class="block-3" id="b23">
+							<!-- <div class="circle-yellow"></div> -->
+						</div>
+
+						<div class="block-3 blue-block" id="b28">
+							<!-- <div class="circle-white"></div> -->
+						</div>
+						<div class="block-3 blue-block" id="b63"></div>
+						<div class="block-3" id="b24"></div>
+						<div class="block-3" id="b27"></div>
+						<div class="block-3" id="b26"></div>
+						<div class="block-3" id="b25"></div>
+					</div>
+
+					<div class="yellow-player">
+						<div class="yellow-child" id="y1">
+							<div class="yellow-goti" id="yellow-goti-1" onclick="changePosition(id, 'yellow')">1</div>
+						</div>
+						<div class="yellow-child" id="y2">
+							<div class="yellow-goti" id="yellow-goti-2" onclick="changePosition(id, 'yellow')">2</div>
+						</div>
+						<div class="yellow-child" id="y3">
+							<div class="yellow-goti" id="yellow-goti-3" onclick="changePosition(id, 'yellow')">3</div>
+						</div>
+						<div class="yellow-child" id="y4">
+							<div class="yellow-goti" id="yellow-goti-4" onclick="changePosition(id, 'yellow')">4</div>
+						</div>
+					</div>				
+				</div>
+			</div>
+
+			<div class="left-block">
+
+				<h1>Roll</h1>
+
+				<div class="dice">
+					<div id="num">
+						<img id="diceImg" src="image/dice0.jpg">
+					</div>
+				</div>
+
+				<button class="spin" onclick="rollDice()">Spin</button>
+				<button class="reset" onclick=location.reload()>Reset</button>
+
+				<p id="txt"></p>
+
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>
